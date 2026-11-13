@@ -1,0 +1,7 @@
+# Paperclip · miniprogram/lhtj Cookie
+# 龙湖 App 和小程序使用同一 URL，请分次开启对应重写抓取，勿同时开启。
+# 获取成功后关闭此重写资源。
+
+hostname = gw2c-hw-open.longfor.com
+
+^https:\/\/gw2c-hw-open\.longfor\.com\/lmarketing-task-api-mvc-prod\/openapi\/task\/v1\/signature\/clock$ url script-request-header https://raw.githubusercontent.com/MaYIHEI/paperclip/refs/heads/main/miniprogram/lhtj/lhtj.js
