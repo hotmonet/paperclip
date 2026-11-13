@@ -1,0 +1,6 @@
+# Paperclip · app/mishop Cookie
+# 获取成功后关闭此重写资源。
+
+hostname = shop-api.retail.mi.com
+
+^https:\/\/shop-api\.retail\.mi\.com\/mtop\/mf\/act\/infinite\/(do|done) url script-request-header https://raw.githubusercontent.com/MaYIHEI/paperclip/refs/heads/main/app/mishop/mishop.cookie.js

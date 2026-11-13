@@ -1,0 +1,6 @@
+# Paperclip · app/weibotalk Cookie
+# 获取成功后关闭此重写资源。
+
+hostname = api.weibo.cn
+
+^https:\/\/api\.weibo\.cn\/2\/(statuses\/container_timeline_topicsub|page\/button) url script-request-body https://raw.githubusercontent.com/MaYIHEI/paperclip/refs/heads/main/app/weibotalk/weibotalk.cookie.js

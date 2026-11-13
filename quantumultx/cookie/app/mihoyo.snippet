@@ -1,0 +1,6 @@
+# Paperclip · app/mihoyo Cookie
+# 获取成功后关闭此重写资源。
+
+hostname = api-takumi.miyoushe.com, api-takumi.mihoyo.com
+
+^https:\/\/api-takumi\.(miyoushe|mihoyo)\.com\/(binding\/api\/getUserGameRolesByStoken|event\/luna\/) url script-response-body https://raw.githubusercontent.com/MaYIHEI/paperclip/refs/heads/main/app/mihoyo/mihoyo.cookie.js
