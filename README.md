@@ -1,69 +1,22 @@
-# 📎 paperclip
+# Paperclip · hotmonet 订阅合集
 
-小程序签到 & 代理重写脚本合集 · Loon / Surge / Quantumult X / Stash
+将整个 quantumultx 文件夹上传到 hotmonet/paperclip 的 main 分支根目录。
+勿将本目录的 README.md 覆盖到仓库根目录。
 
-> 把零散的脚本夹在一起。
+上传后，Quantumult X → 任务 → 任务仓库 → 添加：
 
-📢 Telegram 频道:[**@mayihei**](https://t.me/mayihei) — 脚本更新、失效通知、使用交流
-
----
-
-## 📂 目录
-
-| 目录 | 内容 | 索引 |
-|---|---|---|
-| [`miniprogram/`](./miniprogram/) | 微信小程序签到、自动化脚本 | [查看](./miniprogram/README.md) |
-| [`app/`](./app/) | 原生 APP 签到、自动化脚本 | [查看](./app/README.md) |
-| [`proxy/`](./proxy/) | 通用代理重写规则、Hostname、URL Filter | [查看](./proxy/README.md) |
-| [`loon/`](./loon/) | Loon 插件(`.lpx`),含签到合集与 Cookie 抓取合集 | [查看](./loon/README.md) |
-| [`surge/`](./surge/) | Surge 专用 `.sgmodule` 文件 | [查看](./surge/README.md) |
-
-每个子目录的 README 里有该类下所有脚本的清单、引用地址、使用说明。
-
----
-
-## 🚀 通用引用方式
-
-所有脚本均通过 GitHub Raw URL 引用,格式:
-
-```
-https://raw.githubusercontent.com/MaYIHEI/paperclip/refs/heads/main/<分类>/<脚本名>/<脚本名>.<ext>
+```text
+https://raw.githubusercontent.com/hotmonet/paperclip/refs/heads/main/quantumultx/Paperclip_BoxJs.json
 ```
 
-具体每个脚本的重写规则与 cron 配置,请进入对应子目录的 README 查看。
+此 JSON 同时包含上游 BoxJS 设置与 36 条 Quantumult X 任务。Cookie 规则通过 addons 关联，并包含 hostname。
+任务默认关闭；添加所需任务和附带重写，安装并信任 HTTPS 解密证书，按原项目说明获取 Cookie 后，关闭该 Cookie 重写并开启任务。
 
----
+签到和 Cookie JS 直接引用 MaYIHEI/paperclip 原仓库；原地址下的代码更新后，更新 QX 脚本缓存即可获取。
+这里保存的是任务与抓取规则。上游新增任务、修改 cron、抓取 URL 或 hostname 时，仍需要更新本目录配置。
+Fork 本身不会自动同步上游；可在 GitHub 使用 Sync fork，同步时保留本目录。
 
-## 🤝 贡献规范
-
-新增脚本请遵循 [`CONTRIBUTING.md`](./CONTRIBUTING.md) 中的"一脚本一文件夹"规范。
-里面提供了完整的脚本 README 模板,直接复制填空即可。
-
----
-
-## 🛠 脚本来源与改造
-
-本仓库部分脚本基于社区开源项目改造,**版权归原作者所有**,本人仅做适配性维护与修复。
-修改内容主要包括:
-
-- 适配最新版小程序接口与鉴权方式
-- 修复因小程序版本升级导致的失效问题
-- 统一代码风格与日志输出
-
-每个脚本头部 `@Author` / `@Modifier` 注释中标注了原作者与本仓库修改记录。
-
-如原作者认为本仓库的修改方式不妥或希望下架相关脚本,请通过 GitHub Issue 联系,本人将立即处理。
-
----
-
-## ⚠️ 免责声明
-
-详见 [`DISCLAIMER.md`](./DISCLAIMER.md)。
-
-简言之:本仓库脚本仅供学习研究使用,使用者需自行评估风险并承担全部责任。
-
----
-
-## 📄 License
-
-[MIT](./LICENSE)
+龙湖 App 与小程序的 Cookie 重写分次开启；北京华联与龙德广场二选一。
+AgentRouter 和网上国网先按原项目说明配置账号；汇总无需 Cookie 附件。
+上游 BoxJS 设置保留作者标注与存储键，可能包含任务中未收录的归档项目。
+只做静态格式与引用检查，未在 iPhone 实机验证。
